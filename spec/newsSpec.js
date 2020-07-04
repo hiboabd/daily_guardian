@@ -2,7 +2,7 @@
   let news = new News();
 
   function newsObjectStartsWithEmptyTopStoriesArray(){
-    if(news.allArticles.length !== 0){
+    if(news.topStories.length !== 0){
       throw new Error('News object should start with empty top stories array by default')
     }
   };
@@ -14,7 +14,7 @@
   };
 
   function newsObjectStartsWithEmptySummaryString(){
-    if(news.summary === ""){
+    if(news.summary !== ""){
       throw new Error('News object should start with empty summary string by default')
     }
   };
