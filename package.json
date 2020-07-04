@@ -1,0 +1,22 @@
+{
+  "name": "daily_guardian",
+  "version": "1.0.0",
+  "description": "A single page web app that summarises the top 10 guardian articles daily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiboabd/daily_guardian.git"
+  },
+  "author": "Hibo Abdilaahi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiboabd/daily_guardian/issues"
+  },
+  "homepage": "https://github.com/hiboabd/daily_guardian#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
