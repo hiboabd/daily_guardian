@@ -15,7 +15,7 @@
 
   function retrieveDataFunctionReturnsArrayOfTenArticles(){
     apiRequestUrl = 'http://content.guardianapis.com/search?from-date=2020-07-04&show-fields=thumbnail&api-key=test'
-    news.retrieveData(apiRequestUrl);
+    news.retrieveTopStories(apiRequestUrl);
     setTimeout(function(){ expect(news.topStories.length).toEqual(10); }, 1000);
   };
 

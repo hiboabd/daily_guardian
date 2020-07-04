@@ -5,7 +5,7 @@ class News {
     this.summary = ""
   }
 
-  retrieveData(apiRequestUrl){
+  retrieveTopStories(apiRequestUrl){
     let self = this;
     // Create a request variable and assign a new XMLHttpRequest object to it.
     var request = new XMLHttpRequest()
