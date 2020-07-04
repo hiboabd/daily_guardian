@@ -2,25 +2,25 @@
   let news = new News();
 
   function newsObjectStartsWithEmptyTopStoriesArray(){
-    if(news.topStories.length !== 0){
-      throw new Error('News object should start with empty top stories array by default')
-    }
+    expect(news.topStories.length).toEqual(0)
   };
 
   function newsObjectStartsWithEmptyArticlesArray(){
-    if(news.allArticles.length !== 0){
-      throw new Error('News object should start with empty articles array by default')
-    }
+    expect(news.allArticles.length).toEqual(0)
   };
 
   function newsObjectStartsWithEmptySummaryString(){
-    if(news.summary !== ""){
-      throw new Error('News object should start with empty summary string by default')
-    }
+    expect(news.summary).toEqual("")
+  };
+
+  function retrieveDataFunctionReturnsArrayOfTenArticles(){
+    news.retrieveData();
+    expect(news.topStories.length).toEqual(10)
   };
 
   newsObjectStartsWithEmptyTopStoriesArray();
   newsObjectStartsWithEmptyArticlesArray();
   newsObjectStartsWithEmptySummaryString();
+  retrieveDataFunctionReturnsArrayOfTenArticles();
 
 })(this)
