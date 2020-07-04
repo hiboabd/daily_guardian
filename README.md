@@ -63,6 +63,26 @@ I can read the site comfortably on my phone
 Just in case my laptop breaks
 ```
 
+## Planning
+
+### Class Responsibility Collaborator
+
+| Class        | Methods                  | Instance variables | Responsibility |
+| :---         |     :---:                |        :---:       |         ---:   |
+| News         | retrieveTopArticles()    |  this.allArticles  | Article        |
+| News         | retrieveSummaryData()    | this.singleArticle | Printer        |
+| News         |                          | this.articleSummary|                |
+
+| Class        | Methods        | Relationships |
+| :---         |     :---:      |          ---: |
+| Article      |                |               |
+
+
+| Class        | Methods              | Relationships |
+| :---         |     :---:            |          ---: |
+| Printer      | displayTitleHTML()   |               |
+|              | displaySummaryHTML() |               |
+
 ## Resources used
 
 This app makes use of an API provided by Makers Academy that you can use to talk to the Guardian API and the Aylien text summarisation API. This API's only job is to take your request and add an API key. More information about each of these API's can be found below:
