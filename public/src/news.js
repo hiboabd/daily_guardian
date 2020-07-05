@@ -1,8 +1,8 @@
 class News {
   constructor(){
     this.topStories = []
-    this.article = []
-    this.summary = ""
+    this.singleArticle = []
+    this.articleSummary = ""
     this.printer = new Printer()
   }
 
@@ -34,7 +34,7 @@ class News {
     retrieveArticleSummary(id){
       let self = this;
 
-      self.article = self.topStories[id]
+      self.singleArticle = self.topStories[id]
 
       let apiRequestUrl = 'http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=' + self.topStories[id].webUrl
 
@@ -43,8 +43,8 @@ class News {
 
       request.onload = function() {
         var data = JSON.parse(this.response)
-        self.summary = data
-        self.printer.generateSummaryHTML(self.article, self.summary);
+        self.articleSummary = data
+        self.printer.generateSummaryHTML(self.singleArticle, self.articleSummary);
       }
       request.send()
   }
