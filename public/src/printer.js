@@ -16,4 +16,16 @@ class Printer{
     this.htmlString = htmlString;
   }
 
+  generateSummaryHTML(article, summary){
+    let htmlString = '<p>'
+
+    summary.sentences.forEach((item, i) => {
+      htmlString += item + '</br></br>'
+    });
+
+    htmlString += '</p></br><p><a href="' + article.webUrl + '"> View the original article here </a></p>'
+
+    this.htmlString = htmlString;
+  }
+
 }
