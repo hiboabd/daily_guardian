@@ -31,7 +31,7 @@
   newsObjectStartsWithEmptyTopStoriesArray();
   newsObjectStartsWithEmptyArticleArray();
   newsObjectStartsWithEmptySummaryString();
-  retrieveDataFunctionReturnsArrayOfTenArticles();
+  retrieveTopStoriesFunctionReturnsArrayOfTenArticles();
   retrieveArticleSummaryFunctionReturnsArticleSummaryInfo();
 
 })(this)
