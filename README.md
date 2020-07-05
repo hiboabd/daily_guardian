@@ -69,19 +69,17 @@ Just in case my laptop breaks
 
 | Class        | Methods                  | Instance variables | Responsibility |
 | :---         |     :---:                |        :---:       |         ---:   |
-| News         | retrieveTopArticles()    |  this.allArticles  | Article        |
-| News         | retrieveSummaryData()    | this.singleArticle | Printer        |
-| News         |                          | this.articleSummary|                |
-
-| Class        | Methods        | Relationships |
-| :---         |     :---:      |          ---: |
-| Article      |                |               |
+| News         | retrieveTopArticles()    | this.topStories    | Printer        |
+|              | retrieveSummaryData()    | this.singleArticle |                |
+|              |                          | this.articleSummary|                |
+|              |                          | this.printer       |                |
 
 
 | Class        | Methods              | Relationships |
 | :---         |     :---:            |          ---: |
-| Printer      | displayTitleHTML()   |               |
-|              | displaySummaryHTML() |               |
+| Printer      | generateTitleHTML()  |               |
+|              | generateSummaryHTML()|               |
+|              | displayHTML()        |               |
 
 ## Resources used
 
