@@ -17,7 +17,6 @@ class News {
       // Begin accessing JSON data here
       var data = JSON.parse(this.response)
       self.topStories = data.response.results
-      console.log(self.topStories)
     }
 
     // Send request
@@ -31,20 +30,20 @@ class News {
     }
 
     retrieveArticleSummary(id){
-    let self = this;
+      let self = this;
 
-    self.article = self.topStories[id]
+      self.article = self.topStories[id]
 
-    let apiRequestUrl = 'http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=' + self.topStories[id].webUrl
+      let apiRequestUrl = 'http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=' + self.topStories[id].webUrl
+      
+      var request = new XMLHttpRequest()
+      request.open('GET', apiRequestUrl, true)
 
-    var request = new XMLHttpRequest()
-    request.open('GET', apiRequestUrl, true)
-
-    request.onload = function() {
-      var data = JSON.parse(this.response)
-      self.summary = data
-    }
-    request.send()
+      request.onload = function() {
+        var data = JSON.parse(this.response)
+        self.summary = data
+      }
+      request.send()
   }
 
 }
