@@ -3,6 +3,11 @@ class Printer{
     this.htmlString = ""
   }
 
+  displayHTML(){
+    let element = document.getElementById('news')
+    element.innerHTML = this.htmlString;
+  }
+
   generateTitleHTML(stories){
     let htmlString = ''
 
@@ -13,7 +18,8 @@ class Printer{
       + item.webTitle + '</a></h4></div>'
     });
 
-    this.htmlString = htmlString;
+    this.htmlString = htmlString
+    this.displayHTML();
   }
 
   generateSummaryHTML(article, summary){
@@ -26,6 +32,7 @@ class Printer{
     htmlString += '</p></br><p><a href="' + article.webUrl + '"> View the original article here </a></p>'
 
     this.htmlString = htmlString;
+    this.displayHTML();
   }
 
 }

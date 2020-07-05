@@ -3,6 +3,7 @@ class News {
     this.topStories = []
     this.article = []
     this.summary = ""
+    this.printer = new Printer()
   }
 
   retrieveTopStories(apiRequestUrl){
@@ -17,6 +18,7 @@ class News {
       // Begin accessing JSON data here
       var data = JSON.parse(this.response)
       self.topStories = data.response.results
+      self.printer.generateTitleHTML(self.topStories);
     }
 
     // Send request
@@ -35,13 +37,14 @@ class News {
       self.article = self.topStories[id]
 
       let apiRequestUrl = 'http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=' + self.topStories[id].webUrl
-      
+
       var request = new XMLHttpRequest()
       request.open('GET', apiRequestUrl, true)
 
       request.onload = function() {
         var data = JSON.parse(this.response)
         self.summary = data
+        self.printer.generateSummaryHTML(self.article, self.summary);
       }
       request.send()
   }
