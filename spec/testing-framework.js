@@ -14,6 +14,14 @@
         }
       },
 
+      toNotEqual: function(expectation){
+        if(assertion !== expectation){
+          console.log(`Pass. ${assertion} does not equal ${expectation}`)
+        } else {
+          console.log(`Fail. ${assertion} equals ${expectation}`)
+        }
+      },
+
       toBeGreaterThan: function(expectation){
         if(assertion > expectation){
           console.log(`Pass. ${assertion} is greater than ${expectation}`)
