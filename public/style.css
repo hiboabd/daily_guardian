@@ -1,5 +1,6 @@
 body {
   background: rgb(45,159,253);
+  font-family: 'neufreitextrabold', Arial, sans-serif;
 }
 
 .heading {
@@ -10,21 +11,27 @@ body {
 
 h1 {
   font-size: 70px;
+  margin-bottom: 0;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+#image {
+  margin-top: 20px;
+  border-radius: 15px;
 }
 
 #news {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
 }
 
 .card {
@@ -34,7 +41,7 @@ h4 {
   border-radius: 12px;
   overflow: hidden;
   transition: all .2s linear;
-  align-items: center;
+  text-align: center;
 }
 
 .card:hover {

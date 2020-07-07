@@ -12,7 +12,7 @@ class Printer{
     let htmlString = ''
 
     stories.forEach((item, i) => {
-      htmlString += '<div class="card"><img src="' + stories[i].fields.thumbnail
+      htmlString += '<div class="card"><img id="image" src="' + stories[i].fields.thumbnail
       + '"><h4><a id="' + stories.indexOf(item)
       + '" href="#article/' + stories.indexOf(item) + '">'
       + item.webTitle + '</a></h4></div>'
