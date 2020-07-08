@@ -23,7 +23,7 @@
     <script type="text/javascript">
         let news = new News();
         let date = new Date().toJSON().slice(0,10);
-        apiRequestUrl = 'http://content.guardianapis.com/search?from-date=' + date + '&show-fields=thumbnail&api-key=2b959387-d121-44db-8d3d-ce9da77348e0'
+        apiRequestUrl = 'https://content.guardianapis.com/search?from-date=' + date + '&show-fields=thumbnail&api-key=2b959387-d121-44db-8d3d-ce9da77348e0'
         news.retrieveTopStories(apiRequestUrl);
         window.addEventListener('hashchange', function(){news.retrieveArticleID()}, false);
     </script>
