@@ -1,10 +1,14 @@
 # Daily Guardian
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/392f4737-c1bf-4d1f-b5c6-2e402a53dac0/deploy-status)](https://app.netlify.com/sites/daily-guardian/deploys)
+
 Daily Guardian is a frontend, single page app that summarises the top 10 guardian articles daily for your convenience.
 
 More specifically, this app grabs all the top 10 headlines from the Guardian newspaper API and displays them on a page. Clicking on a headline will show a summary of the article.
 
 This app was written entirely in frontend JavaScript, CSS and HTML.
+
+Check it out [here](https://daily-guardian.netlify.app/)
 
 ## How to use Daily Guardian
 
