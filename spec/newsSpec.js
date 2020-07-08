@@ -6,11 +6,11 @@
   };
 
   function newsObjectStartsWithEmptyArticleArray(){
-    expect(news.article.length).toEqual(0)
+    expect(news.singleArticle.length).toEqual(0)
   };
 
   function newsObjectStartsWithEmptySummaryString(){
-    expect(news.summary).toEqual("")
+    expect(news.articleSummary).toEqual("")
   };
 
   function retrieveTopStoriesFunctionReturnsArrayOfTenArticles(){
@@ -25,7 +25,7 @@
     }
     news.topStories = [article]
     news.retrieveArticleSummary(0);
-    setTimeout(function(){ expect(news.summary).toNotEqual(""); }, 3000);
+    setTimeout(function(){ expect(news.articleSummary).toNotEqual(""); }, 3000);
   };
 
   newsObjectStartsWithEmptyTopStoriesArray();
